@@ -49,3 +49,9 @@ C:\Users\gabit\Documents\01_Senac\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.
 C:\Users\gabit\Documents\01_Senac\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.csproj.CopyComplete
 C:\Users\gabit\Documents\01_Senac\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.dll
 C:\Users\gabit\Documents\01_Senac\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.pdb
+C:\Users\gabit\Documents\01_Senac\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\CadastroRealizado.cshtml.g.cs
+C:\Users\gabit\Documents\01_Senac\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\EditarUsuario.cshtml.g.cs
+C:\Users\gabit\Documents\01_Senac\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\ExcluirUsuario.cshtml.g.cs
+C:\Users\gabit\Documents\01_Senac\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\ListaDeUsuarios.cshtml.g.cs
+C:\Users\gabit\Documents\01_Senac\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\NeedAdmin.cshtml.g.cs
+C:\Users\gabit\Documents\01_Senac\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\RegistrarUsuarios.cshtml.g.cs

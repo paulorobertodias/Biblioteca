@@ -14447,6 +14447,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\gabit\\Documents\\01_Senac\\Biblioteca\\Views\\Usuarios\\ListaDeUsuarios.cshtml",
+      "TargetPath": "Views\\Usuarios\\ListaDeUsuarios.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gabit\\Documents\\01_Senac\\Biblioteca\\Views\\Usuarios\\RegistrarUsuarios.cshtml",
+      "TargetPath": "Views\\Usuarios\\RegistrarUsuarios.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gabit\\Documents\\01_Senac\\Biblioteca\\Views\\Emprestimo\\Cadastro.cshtml",
       "TargetPath": "Views\\Emprestimo\\Cadastro.cshtml",
       "FileKind": "mvc"
@@ -14454,6 +14464,16 @@
     {
       "FilePath": "c:\\Users\\gabit\\Documents\\01_Senac\\Biblioteca\\Views\\Livro\\Edicao.cshtml",
       "TargetPath": "Views\\Livro\\Edicao.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gabit\\Documents\\01_Senac\\Biblioteca\\Views\\Usuarios\\ExcluirUsuario.cshtml",
+      "TargetPath": "Views\\Usuarios\\ExcluirUsuario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gabit\\Documents\\01_Senac\\Biblioteca\\Views\\Usuarios\\NeedAdmin.cshtml",
+      "TargetPath": "Views\\Usuarios\\NeedAdmin.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14474,6 +14494,16 @@
     {
       "FilePath": "c:\\Users\\gabit\\Documents\\01_Senac\\Biblioteca\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gabit\\Documents\\01_Senac\\Biblioteca\\Views\\Usuarios\\EditarUsuario.cshtml",
+      "TargetPath": "Views\\Usuarios\\EditarUsuario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gabit\\Documents\\01_Senac\\Biblioteca\\Views\\Usuarios\\CadastroRealizado.cshtml",
+      "TargetPath": "Views\\Usuarios\\CadastroRealizado.cshtml",
       "FileKind": "mvc"
     }
   ],
