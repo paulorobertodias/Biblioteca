@@ -28,11 +28,13 @@ namespace Biblioteca.Models
             }
         }
 
-        public ICollection<Livro> ListarTodos(FiltrosLivros filtro = null)
+        public ICollection<Livro> ListarTodos( int pagina = 1, int tamanho = 10, FiltrosLivros filtro = null)
         {
             using(BibliotecaContext bc = new BibliotecaContext())
             {
                 IQueryable<Livro> query;
+                
+                int pular = (pagina - 1) * tamanho;
                 
                 if(filtro != null)
                 {
@@ -40,16 +42,16 @@ namespace Biblioteca.Models
                     switch(filtro.TipoFiltro)
                     {
                         case "Autor":
-                            query = bc.Livros.Where(l => l.Autor.Contains(filtro.Filtro));
+                            query = bc.Livros.Where(l => l.Autor.Contains(filtro.Filtro, System.StringComparison.CurrentCultureIgnoreCase));
                         break;
 
                         case "Titulo":
-                            query = bc.Livros.Where(l => l.Titulo.Contains(filtro.Filtro));
+                            query = bc.Livros.Where(l => l.Titulo.Contains(filtro.Filtro, System.StringComparison.CurrentCultureIgnoreCase));
                         break;
 
                         default:
                             query = bc.Livros;
-                        break;
+                            break;
                     }
                 }
                 else
@@ -59,7 +61,7 @@ namespace Biblioteca.Models
                 }
                 
                 //ordenação padrão
-                return query.OrderBy(l => l.Titulo).ToList();
+                return query.OrderBy(l => l.Titulo).Skip (pular).Take (tamanho).ToList();
             }
         }
 
@@ -82,6 +84,12 @@ namespace Biblioteca.Models
             {
                 return bc.Livros.Find(id);
             }
+        }
+
+        public int NumeroDeLivros()
+        {
+             using( var Context = new BibliotecaContext())
+             return Context.Livros.Count();
         }
     }
 }
