@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System;
+using System.Collections.Generic;
 
 namespace Biblioteca.Controllers
 {
@@ -49,23 +50,35 @@ namespace Biblioteca.Controllers
                 EmprestimoService emprestimoService = new EmprestimoService();
 
                 CadEmprestimoViewModel cadModel = new CadEmprestimoViewModel();
+
                 cadModel.Livros = livroService.ListarDisponiveis();
 
                 return View(cadModel);
             }
         }
 
-        public IActionResult Listagem(string tipoFiltro, string filtro)
+ /*       public IActionResult Listagem(string tipoFiltro, string filtro, string itensPorPagina, int NumDaPagina, int PaginaAtual)*/
+        public IActionResult Listagem(string TipoFiltro, string Filtro, int p = 1)
         {
+            Autenticacao.CheckLogin(this);
             FiltrosEmprestimos objFiltro = null;
-            if(!string.IsNullOrEmpty(filtro))
+            if(!string.IsNullOrEmpty(Filtro))
             {
                 objFiltro = new FiltrosEmprestimos();
-                objFiltro.Filtro = filtro;
-                objFiltro.TipoFiltro = tipoFiltro;
+                objFiltro.Filtro = Filtro;
+                objFiltro.TipoFiltro = TipoFiltro;
             }
+
+/*            ViewData["livrosPorPagina"] = (string.IsNullOrEmpty(itensPorPagina) ? 10 : Int32.Parse(itensPorPagina));
+            ViewData["PaginaAtual"] = (PaginaAtual!=0 ? PaginaAtual : 1);*/
+            int quantidadePorPagina = 10;
+
             EmprestimoService emprestimoService = new EmprestimoService();
-            return View(emprestimoService.ListarTodos(objFiltro));
+            int totalDeRegistros = emprestimoService.NumeroDeLivros();
+            ICollection<Emprestimo> lista = emprestimoService.ListarTodos(p, quantidadePorPagina, objFiltro);
+            ViewData["NroPaginas"] = (int) Math.Ceiling((double) totalDeRegistros / quantidadePorPagina);
+            return View(lista);
+
         }
 
         public IActionResult Edicao(int id)
